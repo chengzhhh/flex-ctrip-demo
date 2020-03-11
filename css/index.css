@@ -1,0 +1,446 @@
+body {
+    width: 100%;
+    min-width: 320px;
+    max-width: 540px;
+    margin: 0 auto;
+    overflow-x: hidden;
+    background-color: #f2f2f2;
+}
+@font-face {
+    font-family: 'icomoon';
+    src:  url('../fonts/icomoon.eot?nekozi');
+    src:  url('../fonts/icomoon.eot?nekozi#iefix') format('embedded-opentype'),
+      url('../fonts/icomoon.ttf?nekozi') format('truetype'),
+      url('../fonts/icomoon.woff?nekozi') format('woff'),
+      url('../fonts/icomoon.svg?nekozi#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+  }
+img {
+    vertical-align: middle;
+}
+a {
+    text-decoration: none;
+    color: #000;
+    font-size: 16px;
+}
+ul,li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+dd {
+    margin: 0px;
+}
+div {
+    box-sizing: border-box;
+}
+.search_box {
+    display: flex;
+    overflow: hidden;
+    position: fixed;
+    top: 0px;
+    left: 50%;
+    width: 100%;
+    height: 50px;
+    min-width: 320px;
+    max-width: 540px;
+    padding: 10px 5px;
+    transform: translateX(-50%);
+    background-color: #F6F6F6;
+}
+.search {
+    position: relative;
+    flex: 1;
+    height: 28px;
+    background-color: #F6F6F6;
+    box-shadow: 0 2px 4px rgba(0,0,0,.2);
+    border-radius: 10px;
+}
+.search span {
+    position: absolute;
+    top: 4px;
+    left: 30px;
+    color: #666;
+}
+.search::before {
+    content: "";
+    position: absolute;
+    top: 7px;
+    left: 7px;
+    display: block;
+    height: 28px;
+    width: 28px;
+    background: url(../images/header-script.png) no-repeat;
+    background-size: 20px auto;
+}
+.search_box .login {
+    height: 39px;
+    width: 39px;
+    font-size: 12px;
+    text-align: center;
+}
+.search_box .login::before {
+    content: "";
+    display: block;
+    height: 23px;
+    width: 23px;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    background: url(../images/header-script.png) no-repeat 2px -73px;
+    background-size: 20px auto;
+}
+/* 焦点图部分 */
+.focus-pic {
+    margin-top: 50px;
+}
+.focus-pic img {
+    width: 100%;
+}
+.nav_item {
+    display: flex;
+    height: 64px;
+    background-color: #fff;
+    border-radius: 8px;
+    margin: 4px 3px 0;
+}
+.nav_item li {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.nav_item span {
+    font-size: 12px;
+}
+.nav_item span:nth-child(1) {
+    height: 32px;
+    width: 32px;
+    background: url(../images/localnav_bg.png) no-repeat;
+    background-size: 32px auto;
+}
+.nav_item li:nth-child(2) span {
+    background-position: 0 -32px;
+}
+.nav_item li:nth-child(3) span {
+    background-position: 0 -64px;
+}
+.nav_item li:nth-child(4) span {
+    background-position: 0 -96px;
+}
+.nav_item li:nth-child(5) span {
+    background-position: 0 -128px;
+}
+/* 大导航栏部分 */
+.nav {
+    border-radius: 8px;
+    overflow: hidden;
+    margin: 3px 3px 0px;
+}
+.nav-common {
+    display:flex;
+    height: 110px;
+    background-color: #fff;
+    border-bottom: 2px solid #fff;
+}
+.nav-common li {
+    display: flex;
+    box-sizing: border-box;
+    flex: 1;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.nav-common li a {
+    width: 100%;
+    flex: 1;
+    text-align: center;
+    line-height: 55px;
+    border-left: 1px solid #fff;
+    border-bottom: 1px solid #fff;
+}
+.nav-common li:nth-child(1) {
+    background: url(../images/hotel.png) no-repeat bottom center;
+    background-size: contain;
+}
+.nav .nav-common:nth-child(1) {
+    background: -webkit-linear-gradient(left,#FA5D54,#FA994D);
+}
+.nav .nav-common:nth-child(2) {
+    background: -webkit-linear-gradient(left,#4B90ED,#53BCED);
+}
+.nav .nav-common:nth-child(3) {
+    background: -webkit-linear-gradient(left,#35C2A9,#6BD55A);
+    border: none;
+}
+.sales {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 3px 3px 0px;
+    background-color: #fff;
+    border-radius: 8px;
+}
+.sales li {
+    display: flex;
+    flex: 20%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 0px 0px;
+}
+.sales li span {
+    font-size: 14px;
+}
+.sales li span:nth-child(1) {
+    display: block;
+    width: 28px;
+    height: 28px;
+    background: url(../images/subnav-bg.png) no-repeat;
+    background-size: 28px auto;
+}
+/* 特卖汇 */
+.cheap_hd {
+    position: relative;
+    height: 50px;
+   margin: 3px 3px 0px;
+    background-color: #fff;
+}
+.cheap_hd h2 {
+    text-indent: -999em;
+    margin: 0;
+}
+.cheap_hd::before {
+    content: "";
+    position: absolute;
+    top: 16px;
+    left: 18px;
+    width: 91px;
+    height: 19px;
+    background: url(../images/hot.png);
+    background-size: 90px auto;
+}
+.cheap_bd {
+    display: flex;
+    margin: 0px 3px;
+    background-color: #fff;
+    padding: 0px 8px;
+    padding-bottom: 8px;
+}
+.cheap_bd>div {
+    flex: 1;
+    height: 205px;
+}
+.cheap_bd_left {
+    overflow: hidden;
+    padding: 0px 3px 0px 8px;
+    background-color: #f9f9f9;
+}
+.cheap_bd_left a {
+    display: block;
+    height: 100%;
+    width: 100%;
+}
+.cheap_bd_left img {
+    width: 100%;
+    height: 60%;
+}
+.cheap_bd_left p {
+    margin: 8px 0px 0px;
+    height: 15%;
+    white-space: nowrap;
+    overflow:hidden; 
+    text-overflow:ellipsis;
+    
+}
+.cheap_bd_left span {
+    display: block;
+    height: 10%;
+    color: red;
+}
+.cheap_bd_right {
+    display: flex;
+    flex-direction: column;
+    padding: 0px 0px 0px 1px;
+    margin-left: 6px;
+}
+.cheap_bd_right_top,
+.cheap_bd_right_bottom {
+    flex: 1;
+    height: 100%;
+    background-color: #f9f9f9;
+}
+.cheap_bd_right_top {
+    position: relative;
+    border-bottom: 3px solid #fff;
+}
+.cheap_bd_right_top_item {
+    position: absolute;
+    top: 20px;
+    left: 10px;
+}
+.cheap_bd_right_top_item dt {
+    color: red;
+    font-size: 14px;
+    font-weight: 700;
+}
+.cheap_bd_right_top_item dd {
+    font-size: 12px;
+}
+.cheap_bd_right_top img {
+    position: absolute;
+    top: 25px;
+    right: 12px;
+    width: 54px;
+}
+.cheap_bd_right_bottom {
+    display: flex;
+}
+.cheap_bd_right_bottom img {
+    width: 54px;
+    flex: 1;
+}
+.cheap_bd_right_bottom div {
+    flex: 50%;
+    text-align: center;
+}
+.cheap_bd_right_bottom dl {
+    flex: 1;
+} 
+.cheap_bd_right_bottom div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.cheap_bd_right_bottom div:nth-child(1) dt {
+    color: #6aabff;
+    font-weight: 700;
+    font-size: 14px;
+}
+.cheap_bd_right_bottom div:nth-child(2) dt {
+    color: #53ca72;
+    font-size: 14px;
+    font-weight: 700;
+}
+.cheap_bd_right_bottom div dd {
+    font-size: 12px;
+}
+
+/* 优惠部分 */
+.offer_hd {
+    position: relative;
+    height: 50px;
+    overflow: hidden;
+    background-color: #fff;
+    margin: 3px 3px 0px;
+    overflow: hidden;
+    border-bottom: 1px solid #e6e6e6;
+}
+.offer_hd h2 {
+    text-indent: -999em;
+}
+.offer_hd::before {
+    content: "";
+    position: absolute;
+    top: 16px;
+    left: 16px;
+    display: block;
+    width: 90px;
+    height: 20px;
+    background: url(../images/hot.png) no-repeat 0px -22px;
+    background-size: 90px auto;
+}
+.offer_hd::after {
+    content: "";
+    display: block;
+    width: 36px;
+    height: 36px;
+    position: absolute;
+    top: 16px;
+    left: 105px;
+    background: url(../images/icon-gg@2x.png) no-repeat;
+    background-size: 36px auto;
+}
+.more {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    height: 25px;
+    line-height: 25px;
+    padding: 0px 20px 0px 10px;
+    background: -webkit-linear-gradient(left,#FF5170,#FF6AC3);
+    border-radius: 12px;
+    color: #fff;
+    font-size: 14px;
+}
+.more span {
+    position: absolute;
+    top: 7px;
+    right: 10px;
+    display: block;
+    width: 8px;
+    height: 8px;
+    border-right: 2px solid #fff;
+    border-bottom: 2px solid #fff;
+    transform: rotate(-45deg);
+}
+.offer_bd {
+    margin: 0px 3px 0px;
+}
+.offer_bd div {
+    display: flex;
+}
+.offer_bd div:nth-child(1) a {
+    display: flex;
+    flex: 1;
+}
+.offer_bd div a img {
+    flex: 1;
+    width: 100%;
+}
+/* 联系方式部分 */
+.tel {
+    display: flex;
+    border-top: 1px solid #c2c2c2;
+    border-bottom: 1px solid #c2c2c2;
+    margin: 4px 3px 0px;
+}
+.tel a {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    background-color: #fff;
+    align-items: center;
+    padding: 10px 0px;
+}
+.tel a::before {
+    flex: 1;
+    font-family: 'icomoon';
+    color: #c2c2c2;
+    font-size: 20px;
+}
+.tel a:nth-child(1)::before {
+    content: "\e942";
+}
+.tel a:nth-child(2)::before {
+    content: "\ea3e";
+}
+.tel a:nth-child(3)::before {
+    content: "\e971";
+}
+.tel a span {
+    flex: 1;
+    font-size: 12px;
+}
+/* 底部部分 */
+footer {
+    font-size: 12px;
+    text-align: center;
+}
+footer p:nth-child(1) {
+    color: #666;
+}
+footer p:nth-child(2) {
+    color: #999;
+}
